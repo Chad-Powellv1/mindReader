@@ -110,7 +110,8 @@ INIT
 
 FUNCTIONS
 
-    randomSymbol -> Loops through the symbol array, but needs to pick specific symbols based on the rule of 9 (n % 9 === 0). Important, need to make sure not to use same symbol twice.
+    randomSymbol -> Loops through the symbol array, but needs to pick specific symbols based on the rule of 9 (n % 9 === 0). 
+    Important, need to make sure not to use same symbol twice.
 
     updateState -> view++
       updateView
