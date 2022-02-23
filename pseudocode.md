@@ -138,3 +138,25 @@ FUNCTIONS
 END
 
 ```
+<br/><br/>
+<hr>
+
+## **HTML Layout**:
+
+  - ### **Bootstrap Integration**:
+
+    - Main Container
+      - row
+        - col
+          - headingText ->Centered on page
+          - **Note**: Enable overflow on View 4 for scroll
+
+      - row
+        - col
+          - nextButton -> Centered on page
+      
+      - row
+        - col 
+          - helperText -> Centered on page
+      
+      - navButton -> Positioned bottom right on all views
