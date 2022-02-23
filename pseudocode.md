@@ -111,10 +111,12 @@ INIT
 
 FUNCTIONS
 
+
     randomSymbol -> 
       - Loops through the symbol array to create 99 symbols.
       - Needs to pick specific symbols based on the rule of 9 (n % 9 === 0). 
       - Important, need to make sure not to use same symbol twice.
+
 
     updateState -> view++
       updateView
