@@ -34,15 +34,16 @@
 
     - helperText: Provides helpful tips to the user on on how to proceed through the application. Hidden on first view.
 
+
   - Buttons
 
     - navButton: Used to change state.
+      - navButtonText = 'Go' // Displayed on View 0.
+      - navButtonIcon = 'Refresh' // Displayed on View 1 - 5.
 
     - nextButton: Used to change state.
-
-  - Scroll Feature
-
-    - Bootstrap:
+      - nextButtonText = 'NEXT' // Displayed on View 2 - 3.
+      - nextButtonText = 'REVEAL' // Displayed on View 4.
 
 <br/><br/>
 
@@ -87,7 +88,7 @@
 
 <br/>
 
-- ### **View 6**:
+- ### **View 5**:
   // Properties
   - headingText = visible,
   - nextButton = hidden,
@@ -110,7 +111,10 @@ INIT
 
 FUNCTIONS
 
-    randomSymbol -> Loops through the symbol array, but needs to pick specific symbols based on the rule of 9 (n % 9 === 0). Important, need to make sure not to use same symbol twice.
+    randomSymbol -> 
+      - Loops through the symbol array to create 99 symbols.
+      - Needs to pick specific symbols based on the rule of 9 (n % 9 === 0). 
+      - Important, need to make sure not to use same symbol twice.
 
     updateState -> view++
       updateView
@@ -121,6 +125,15 @@ FUNCTIONS
       updateView
 
     updateView -> Updates view based on current state
+      - Based on the current state views will be displayed & updated with:
+        - headingText.style.display
+        - headingText.innerText
+        - helperText.style.display
+        - helperText.innerText
+        - nextButton.style.display
+        - nextButton.innerText
+        - navButton.style.display
+        - navButton.style.display
 
 END
 
