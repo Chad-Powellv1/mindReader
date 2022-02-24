@@ -34,10 +34,10 @@
 
     - helperText: Provides helpful tips to the user on on how to proceed through the application. Hidden on first view.
 
-
   - Buttons
 
     - navButton: Used to change state.
+
       - navButtonText = 'Go' // Displayed on View 0.
       - navButtonIcon = 'Refresh' // Displayed on View 1 - 5.
 
@@ -107,13 +107,14 @@ INIT
     Create click handlers navButton and nextButton
     Create variable setting view to zero
     Create empty variable to hold a result symbol
+    Create empty variable to hold player symbol
     Create array containing symbols
 
 FUNCTIONS
 
-    randomSymbol -> 
+    randomSymbol ->
       - Loops through the symbol array to create 99 symbols.
-      - Needs to pick specific symbols based on the rule of 9 (n % 9 === 0). 
+      - Needs to pick specific symbols based on the rule of 9 (n % 9 === 0).
       - Important, need to make sure not to use same symbol twice.
 
     updateState -> view++
@@ -138,25 +139,31 @@ FUNCTIONS
 END
 
 ```
+
 <br/><br/>
+
 <hr>
 
 ## **HTML Layout**:
 
-  - ### **Bootstrap Integration**:
+- ### **Bootstrap Integration**:
 
-    - Main Container
-      - row
-        - col
-          - headingText ->Centered on page
-          - **Note**: Enable overflow on View 4 for scroll
+  - Main Container
 
-      - row
-        - col
-          - nextButton -> Centered on page
-      
-      - row
-        - col 
-          - helperText -> Centered on page
-      
-      - navButton -> Positioned bottom right on all views
+    - row
+
+      - col
+        - headingText ->Centered on page
+        - **Note**: Enable overflow on View 4 for scroll
+
+    - row
+
+      - col
+        - nextButton -> Centered on page
+
+    - row
+
+      - col
+        - helperText -> Centered on page
+
+    - navButton -> Positioned bottom right on all views
