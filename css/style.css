@@ -1,0 +1,28 @@
+
+#header {
+	font-size: 3em;
+	max-height: 415px;
+}
+
+#nextButton {
+	padding: 1em 5em 1em 5em;
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+#helper {
+	font-size: 1.5em;
+}
+
+.bottom {
+	position: fixed;
+	bottom: 3%;
+	right: 8%;
+	border-radius: 50px !important;
+	padding: 5%;
+	font-size: 2em;
+	font-weight: bold;
+	color: #5bc0de;
+}
+
+
