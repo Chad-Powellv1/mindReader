@@ -7,4 +7,4 @@
 <p align = 'center'><img src = './img/bg1.png' alt = 'App image' width = '100'/></p>
 <br/><br/>
 
-[Take a look at the project. . .](#)
+[Take a look at the project. . .](https://chad-powellv1.github.io/mindreader/)
