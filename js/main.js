@@ -6,8 +6,10 @@ let symbols = ['!', '@', '#', '$', '%', '^', '&', '*', '~', '+', '=', '}', "<", 
 let playerSymbol = '';
 let view = 0;
 
+// generate numbers and symbols for app results
 const generateResults = function () {
 	let result = '';
+	// randomize players symbol
 	playerSymbol = symbols[Math.floor(Math.random() * symbols.length)];
 	for (let i = 0; i <= 99; i++) {
 		if (i % 9 === 0) {
@@ -17,7 +19,7 @@ const generateResults = function () {
 			result += i + ' - ' + otherSymbol + '\n';
 		}
 	}
-	return result;
+	return result + ' . . . ';
 };
 
 // create function to update state
@@ -49,12 +51,12 @@ const updateView = function () {
 			break;
 
 		case 1:
-			head.innerText = 'Pick a number from 01 - 99';
+			head.innerText = 'Pick a number from \n 01 - 99';
 			help.innerText = 'when you have your number click next';
 			help.style.visibility = 'visible';
 			nextButton.style.visibility = 'visible';
 			nextButton.innerText = 'NEXT';
-			navButton.innerText = 'R';
+			navButton.innerHTML = '<img src= "./img/refresh.png"  width="45" />';
 			break;
 
 		case 2:
@@ -62,35 +64,35 @@ const updateView = function () {
 			help.innerText = 'Ex: 14 is 1 + 4 = 5';
 			help.style.visibility = 'visible';
 			nextButton.innerText = 'NEXT';
-			navButton.innerText = 'R';
+			navButton.innerHTML = '<img src= "./img/refresh.png"  width="45" />';
 			break;
 
 		case 3:
-			head.innerText = 'Subtract your new number from the original number';
-			help.innerText = 'Ex: 14 - 5 = 9 click next to proceed';
+			head.innerText = 'Subtract \n your new number from the original number';
+			help.innerText = 'Ex: 14 - 5 = 9 \n click next to proceed';
 			help.style.visibility = 'visible';
 			nextButton.innerText = 'NEXT';
 			nextButton.style.visibility = 'visible';
-			navButton.innerText = 'R';
+			navButton.innerHTML = '<img src= "./img/refresh.png"  width="45" />';
 			break;
 
 		case 4:
 			head.innerText = generateResults();
-			head.style.overflowY= 'scroll-auto';
+			head.style.overflowY= 'auto';
 			help.innerText =
-				'Find your new number. Note the symbol beside the number';
+				'Find your new number. \n Note the symbol beside the number';
 			help.style.visibility = 'visible';
 			nextButton.innerText = 'REVEAL';
 			nextButton.style.visibility = 'visible';
-			navButton.innerText = 'R';
+			navButton.innerHTML = '<img src= "./img/refresh.png"  width="45" />';
 			break;
 
 		case 5:
 			head.innerText = playerSymbol;
-			help.innerText = playerSymbol;
+			help.innerText = 'Your symbol is: ' + '\n' + playerSymbol;
 			help.style.visibility = 'visible';
 			nextButton.style.visibility = 'hidden';
-			navButton.innerText = 'R';
+			navButton.innerHTML = '<img src= "./img/refresh.png"  width="45" />';
 	}
 };
 
